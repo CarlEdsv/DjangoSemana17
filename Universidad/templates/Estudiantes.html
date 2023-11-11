@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudiantes</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Lista de Estudiantes</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Id de Carrera</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for estudiante in estudiantes%}
+
+            <tr>
+                <td>{{estudiante.id}}</td>
+                <td>{{estudiante.nombre}}</td>
+                <td>{{estudiante.apellido}}</td>
+                <td>{{estudiante.edad}}</td>
+                <td>{{estudiante.carreraid}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

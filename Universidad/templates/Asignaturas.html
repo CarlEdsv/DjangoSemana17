@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignaturas</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Lista de Asignaturas</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Id de Carrera</th>
+                <th>Id de Profesor</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for asignatura in asignaturas%}
+            <tr>
+                <td>{{asignatura.id}}</td>
+                <td>{{asignatura.nombre}}</td>
+                <td>{{asignatura.carreraid}}</td>
+                <td>{{asignatura.profesorid}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
